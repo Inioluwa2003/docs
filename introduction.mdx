@@ -1,29 +1,74 @@
-# Welcome to TWMP API Documentation
+# Welcome to The Movie Database API (TMDB)
 
-The **TWMP API** enables you to interact with the powerful features of the TWMP platform. This API allows you to integrate, manage, and automate various functionalities of the TWMP system with ease. Whether you're looking to perform basic CRUD operations, trigger workflows, or analyze your data, this documentation will guide you through everything you need to know.
+The TMDB API offers an extensive collection of resources for developers to access movie, TV, and actor-related data. With this API, you can build applications that retrieve and manipulate content from one of the most popular movie and TV databases worldwide.
 
-## Key Features
+## Base URL
 
-- **Integration**: Seamlessly integrate with other tools and platforms.
-- **Automation**: Automate workflows for repetitive tasks.
-- **Analytics**: Gather and visualize insights from your data.
-- **Security**: Built with a focus on secure authentication and data protection.
-
-## Getting Started
-
-To get started with the TWMP API, you need to:
-
-1. [Obtain an API Key](#obtaining-an-api-key)
-2. Set up your environment with the necessary tools.
-3. Make your first API call to see the response structure.
-
-For a detailed step-by-step guide, visit our [Quick Start Guide](#quick-start-guide).
+All requests to the TMDB API should be made to:
+```
+https://api.themoviedb.org/3
+```
 
 ## Authentication
 
-The TWMP API uses OAuth2.0 for secure authentication. All API requests must include a valid access token, which can be obtained after a successful OAuth login.
+### API Key
+To interact with the TMDB API, you must first generate an API key. This key will be used to authenticate your requests.
 
-Example of how to authenticate:
+- [Learn more about generating an API key](https://developer.themoviedb.org/reference/authentication-how-do-i-generate-a-session-id)
 
-```bash
-curl -X POST https://api.twmp.com/oauth/token -d client_id=<your_client_id> -d client_secret=<your_client_secret>
+### Session Management
+TMDB provides multiple ways to manage sessions, including guest sessions and fully authenticated user sessions.
+
+- [Creating Guest Sessions](https://developer.themoviedb.org/reference/authentication-create-guest-session)
+- [Creating User Sessions](https://developer.themoviedb.org/reference/authentication-create-session)
+
+## API Resources
+
+The TMDB API offers access to the following resources:
+
+### Accounts
+Manage and retrieve user account details and preferences.
+
+- [Get Account Details](https://developer.themoviedb.org/reference/account-get-details)
+- [Manage Favorite Movies and TV Shows](https://developer.themoviedb.org/reference/account-mark-as-favorite)
+- [Add Movies or TV Shows to Watchlist](https://developer.themoviedb.org/reference/account-add-to-watchlist)
+
+### Authentication
+Handle API key validation and session management.
+
+- [Validate API Key](https://developer.themoviedb.org/reference/authentication-validate-key)
+- [Create Request Token](https://developer.themoviedb.org/reference/authentication-create-request-token)
+
+### Certifications
+Retrieve certification ratings for movies and TV shows by region.
+
+- [Get Movie Certifications](https://developer.themoviedb.org/reference/certifications-get-movie-list)
+- [Get TV Certifications](https://developer.themoviedb.org/reference/certifications-get-tv-list)
+
+## Getting Started
+
+1. **Sign Up**: Create an account at [TMDB](https://www.themoviedb.org/).
+2. **Get an API Key**: Obtain your unique API key from the [API Dashboard](https://www.themoviedb.org/settings/api).
+3. **Explore the API**: Review the [TMDB API Documentation](https://developer.themoviedb.org/).
+
+## Rate Limiting
+TMDB enforces rate limits to ensure fair usage. For detailed information about rate limits, consult the [Rate Limiting Guide](https://developer.themoviedb.org/docs/rate-limiting).
+
+## SDKs and Libraries
+TMDB supports various SDKs and libraries to help you integrate the API efficiently:
+
+- [Python SDK](https://github.com/example/python-tmdb)
+- [JavaScript SDK](https://github.com/example/js-tmdb)
+- [Ruby SDK](https://github.com/example/ruby-tmdb)
+
+## Feedback and Support
+
+If you encounter any issues or have suggestions for improvement, you can:
+
+- Submit a ticket on our [Support Page](https://support.themoviedb.org/).
+- Join discussions on the [TMDB Community Forum](https://community.themoviedb.org/).
+
+---
+
+Happy developing with TMDB! Make sure to explore the API's vast features and integrate the latest movie and TV content into your applications effortlessly.
+
