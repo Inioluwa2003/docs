@@ -1,71 +1,29 @@
----
-title: Introduction
-description: "Welcome to the home of your new documentation"
----
+# Welcome to TWMP API Documentation
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+The **TWMP API** enables you to interact with the powerful features of the TWMP platform. This API allows you to integrate, manage, and automate various functionalities of the TWMP system with ease. Whether you're looking to perform basic CRUD operations, trigger workflows, or analyze your data, this documentation will guide you through everything you need to know.
 
-## Setting up
+## Key Features
 
-The first step to world-class documentation is setting up your editing environments.
+- **Integration**: Seamlessly integrate with other tools and platforms.
+- **Automation**: Automate workflows for repetitive tasks.
+- **Analytics**: Gather and visualize insights from your data.
+- **Security**: Built with a focus on secure authentication and data protection.
 
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
+## Getting Started
 
-## Make it yours
+To get started with the TWMP API, you need to:
 
-Update your docs to your brand and add valuable content for the best user conversion.
+1. [Obtain an API Key](#obtaining-an-api-key)
+2. Set up your environment with the necessary tools.
+3. Make your first API call to see the response structure.
 
-<CardGroup cols={2}>
-  <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
-  >
-    Customize your docs to your company's colors and brands
-  </Card>
-  <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
-  >
-    Automatically generate endpoints from an OpenAPI spec
-  </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/content/components/accordions"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
-</CardGroup>
+For a detailed step-by-step guide, visit our [Quick Start Guide](#quick-start-guide).
+
+## Authentication
+
+The TWMP API uses OAuth2.0 for secure authentication. All API requests must include a valid access token, which can be obtained after a successful OAuth login.
+
+Example of how to authenticate:
+
+```bash
+curl -X POST https://api.twmp.com/oauth/token -d client_id=<your_client_id> -d client_secret=<your_client_secret>
